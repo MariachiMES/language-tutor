@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  name    String?
+  role    Role     @default(USER)
+  children   Child[]
+  profile Profile?
+  classes Classroom[]
+}
+
+model Profile {
+  id     Int    @id @default(autoincrement())
+  bio    String
+  user   User   @relation(fields: [userId], references: [id])
+  userId Int    @unique
+}
+
+model Child {
+  id         Int        @id @default(autoincrement())
+  language   String
+  published  Boolean    @default(false)
+  parent     User       @relation(fields: [parentId], references: [id])
+  parentId   Int
+  classes Classroom[]
+
+}
+
+model Classroom {
+  id    Int    @id @default(autoincrement())
+  name  String
+  children Child[]
+  teacher User @relation(fields: [userId], references: [id])
+  userId Int 
+}
+
+model Payment {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  paid Boolean @default(false)
+  
+}
+enum Role {
+  USER
+  ADMIN
+  PARENT
+}
