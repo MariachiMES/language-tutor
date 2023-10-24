@@ -38,7 +38,7 @@ export function GlassPricingCards() {
 					return (
 						<div
 							id={idx}
-							style={{ backdropFilter: 'blur(10px)' }}
+							style={{ backdropFilter: 'blur(5px)' }}
 							className='relative  mx-2 px-4 bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-10 border border-gray-200'
 						>
 							<div className='relative pb-8 m-0 mb-8 overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none border-white/10 bg-clip-border'>
@@ -97,7 +97,7 @@ export function GlassPricingCards() {
 									type='button'
 									data-ripple-dark='true'
 								>
-									Buy Now
+									Select
 								</button>
 							</div>
 						</div>
