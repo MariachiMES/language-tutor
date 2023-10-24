@@ -12,7 +12,9 @@ export default function Pricing() {
 			}}
 		>
 			<Navbar title='Pricing' />
+
 			<Hero component={glassPricing} />
+
 			<Footer />
 		</main>
 	);
