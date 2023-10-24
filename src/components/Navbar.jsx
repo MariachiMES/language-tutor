@@ -1,9 +1,9 @@
-export function Navbar({ props }) {
+export function Navbar({ title: title }) {
 	return (
 		<div className='flex items-center h-20'>
 			<div className='mx-auto relative px-5 max-w-screen-xl w-full flex items-center justify-end'>
 				<div className='text-4xl font-light uppercase absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2'>
-					¡BIENVENID@S!
+					{title}
 				</div>
 
 				<nav className='flex gap-5'>
