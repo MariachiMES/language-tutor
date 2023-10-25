@@ -1,3 +1,13 @@
+const books = [
+	{ title: 'Catcher In The Rye', author: 'J.D. Salinger' },
+	{
+		title: 'Where The Wild Things Are',
+		author: 'Robert Pirsig',
+	},
+	{ title: 'It', author: 'Stephen King' },
+	{ title: 'The Lord of The Rings', author: 'J.R. Tolkein' },
+];
+const achievements = ['Excellent Reader', 'Fast Reader', 'Knocking Them Down'];
 export function GlassActivityCards() {
 	return (
 		<>
@@ -58,7 +68,16 @@ export function GlassActivityCards() {
 						<h5 className='block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-white'>
 							Recently Read
 						</h5>
-						<div className=''></div>
+						<div className='flex justify-center items-center'>
+							{books.map((book) => {
+								return (
+									<div className='block m-6'>
+										<h3 className=''>{book.title}</h3>
+										<h5 className='text-gray-400'> {book.author}</h5>
+									</div>
+								);
+							})}
+						</div>
 					</div>
 					<div className='p-6 pt-0'></div>
 				</div>
@@ -82,13 +101,17 @@ export function GlassActivityCards() {
 							/>
 						</svg>
 						<h5 className='block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-white'>
-							Recently Read
+							Achievements
 						</h5>
-						<p className='block font-sans text-base antialiased font-light leading-relaxed text-inherit text-white'>
-							Because it's about motivating the doers. Because I'm here to
-							follow my dreams and inspire others. Lorem ipsum, dolor sit amet
-							consectetur adipisicing elit.
-						</p>
+						<div className='flex justify-center items-center'>
+							{achievements.map((achievement) => {
+								return (
+									<div className='block m-6'>
+										<h3 className=''>{achievement}</h3>
+									</div>
+								);
+							})}
+						</div>
 					</div>
 					<div className='p-6 pt-0'></div>
 				</div>
