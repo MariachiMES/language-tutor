@@ -6,7 +6,7 @@ export function AboutMeCard() {
 				<div
 					style={{ backdropFilter: 'blur(10px)' }}
 					id='profile'
-					className='w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-opacity-10 bg-white  mx-6 lg:mx-0'
+					className='w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-opacity-10 bg-white  mx-6 lg:mx-0 border border-gray-200 border-r-0'
 				>
 					<div className='p-4 md:p-12 text-center lg:text-left'>
 						<div
