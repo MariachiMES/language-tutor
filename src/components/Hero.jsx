@@ -7,5 +7,3 @@ export function Hero({ component: Component }) {
 		</div>
 	);
 }
-
-<section className='bg-black min-h-screen'></section>;

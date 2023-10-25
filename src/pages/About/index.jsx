@@ -11,7 +11,10 @@ export default function About() {
 				backgroundImage: `url('https://as1.ftcdn.net/v2/jpg/06/50/24/66/1000_F_650246611_LCLxYtYrsM93HOjpXRQbNk880C0w6EuD.jpg')`,
 			}}
 		>
-			<Navbar title='About Me' />
+			<Navbar
+				title='About Me'
+				page='About'
+			/>
 			<Hero component={aboutMeCard} />
 			<Footer />
 		</main>

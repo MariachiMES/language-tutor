@@ -29,7 +29,10 @@ export default function Home() {
 				backgroundImage: `url('https://as1.ftcdn.net/v2/jpg/06/50/24/66/1000_F_650246611_LCLxYtYrsM93HOjpXRQbNk880C0w6EuD.jpg')`,
 			}}
 		>
-			<Navbar title='¡BIENVENID@S!' />
+			<Navbar
+				title='¡BIENVENID@S!'
+				page='Home'
+			/>
 			<Hero component={heroBar} />
 			<Footer />
 		</main>
